@@ -14,6 +14,7 @@ import { add } from "../app/slices/CartSlice";
 import { useDispatch } from "react-redux";
 import { useSnackbar } from "notistack";
 import { toast } from 'react-toastify';
+import { Backdrop, CircularProgress, styled } from '@mui/material';
 const arr = [
     {
         id: 1,
@@ -34,6 +35,13 @@ const settings = {
 };
 
 
+const SmoothBackdrop = styled(Backdrop)(({ theme }) => ({
+    transition: theme.transitions.create(['opacity'], {
+        duration: theme.transitions.duration.standard,
+    }),
+    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Adjust the opacity here
+}));
+
 
 function Product() {
     const dispatch = useDispatch();
@@ -44,24 +52,36 @@ function Product() {
     const [size, setSize] = useState('');
     const [open, setOpen] = useState(false);
     const [open1, setOpen1] = useState(false);
-    const [selectImage,setSelectImage]=useState(null)
+    const [currentImage, setCurrentImage] = useState(location.state.image);
+    const [selectedImage, setSelectedImage] = useState(null)
+    const [openBackDrop, setOpenBackDrop] = useState(false);
 
 
 
+    const handleClickImage = (newImange) => {
+        setCurrentImage(newImange)
+        setSelectedImage(newImange)
+    }
 
-    const addToCart = () => {      <img className='h-[510px] rounded-xl' src={location.state.image} alt='pic2' />
+    const addToCart = () => {
         if (size) {
-            const uniqueprd = { ...location.state, Size: size, quantity: quantity }
+            setOpenBackDrop(true);
+            const uniqueprd = { ...location.state, Size: size, quantity: quantity };
 
             dispatch(add(uniqueprd));
-            enqueueSnackbar(`Item added to your cart successfully`, {
-                variant: "success",
-                autoHideDuration: 2000,
-            });
+
+            setTimeout(() => {
+                setOpenBackDrop(false);
+                enqueueSnackbar('Item added to your cart successfully', {
+                    variant: "success",
+                    autoHideDuration: 2000,
+                });
+            }, 2000);
+
         } else {
-            toast.error("select Size ")
-            setSize('')
-            setQuantity(1)
+            toast.error("Select Size");
+            setSize('');
+            setQuantity(1);
         }
 
     };
@@ -69,7 +89,7 @@ function Product() {
 
     const handleClick = (value) => {
         setSize(value);
-       
+
     };
 
     const decreaseQuantity = () => {
@@ -99,18 +119,22 @@ function Product() {
                                 <div className='block1 flex md:w-[50%] '>
                                     <div className='child1 mt-14'>
                                         <div className=' h-36 w-20 grid grid-rows-2 gap-44'>
-                                            <img className='h-36 rounded-md' src={location.state.image} alt='piv1' />
-                                            <img className='h-36 rounded-md' src={location.state.imageHover} alt='piv1' />
+                                            <img onClick={() => handleClickImage(location.state.image)}
+                                                className={`h-36 rounded-md object-cover ${selectedImage === location.state.image ? 'border-2 border-black ' : ''}`}
+                                                src={location.state.image} alt='piv1' />
+                                            <img onClick={() => handleClickImage(location.state.imageHover)}
+                                                className={`h-36 rounded-md  object-cover ${selectedImage === location.state.imageHover ? 'border-2 border-black' : ''}`}
+                                                src={location.state.imageHover} alt='piv1' />
                                         </div>
                                     </div>
                                     <div className='child2 ml-10'>
                                         <div className='w-[450px] object-center'>
-                                            <img className='h-[510px] rounded-xl' src={location.state.image} alt='pic2' />
+                                            <img className='h-[510px] rounded-xl' src={currentImage} alt='pic2' />
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
+
+
                                 <div className='block2 ml-3 md:w-[50%]'>
                                     <div>
                                         <p className='mt-2 md:text-sm'>OVERLAYS CLOTHING</p>
@@ -147,7 +171,14 @@ function Product() {
                                         <div className='mt-5'>
                                             <button onClick={() => addToCart(location.state)}
                                                 className="font-medium bg-gray-400 text-white w-[96%] md:w-[70%] p-4 rounded transition duration-500 ease-in-out hover:bg-gray-600">
-                                                ADD TO CART</button><br />
+                                                ADD TO CART
+                                                <SmoothBackdrop
+                                                    open={openBackDrop}
+
+                                                >
+                                                    <CircularProgress color="inherit" />
+                                                </SmoothBackdrop>
+                                            </button><br />
                                             <button className='font-medium bg-black text-white  w-[96%]  md:w-[70%] p-4 rounded mt-5'>PROCEED TO BUY</button>
                                         </div>
                                     </div>
@@ -212,9 +243,16 @@ function Product() {
                                             </div>
                                             <div className='mt-5'>
                                                 <button
-                                                 onClick={() => addToCart(location.state)}
+                                                    onClick={() => addToCart(location.state)}
                                                     className="font-medium bg-gray-400 text-white w-[96%] md:w-[70%] p-4 rounded transition duration-500 ease-in-out hover:bg-gray-600">
-                                                    ADD TO CART</button><br />
+                                                    ADD TO CART
+                                                    <SmoothBackdrop
+                                                        open={openBackDrop}
+
+                                                    >
+                                                        <CircularProgress color="inherit" />
+                                                    </SmoothBackdrop>
+                                                </button><br />
                                                 <button className='font-medium bg-black text-white  w-[96%]  md:w-[70%] p-4 rounded mt-5'>PROCEED TO BUY</button>
                                             </div>
                                         </div>

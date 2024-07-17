@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
@@ -7,12 +7,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { remove, increaseQuantity, decreaseQuantity, selectTotalPrice } from '../app/slices/CartSlice';
 import { enqueueSnackbar } from 'notistack';
 import { Link } from 'react-router-dom';
+import CheckOutModal from '../checkOut/CheckOutModal';
+import CheckSpinner from '../spinners/CheckSpinner';
+import { Button } from '@mui/material';
 
 export default function Cart(props) {
-
   const dispatch = useDispatch();
   const { cart } = useSelector((state) => state);
   const totalPrice = useSelector(selectTotalPrice);
+  const [proceedCheckOutModal, setProceedCheckOutModal] = useState(false);
+  const [loadingItems, setLoadingItems] = useState({});
 
   const removeItemFromCart = (id) => {
     dispatch(remove(id));
@@ -23,11 +27,19 @@ export default function Cart(props) {
   };
 
   const handleIncreaseQuantity = (id) => {
+    setLoadingItems((prev) => ({ ...prev, [id]: true }));
     dispatch(increaseQuantity(id));
+    setTimeout(() => {
+      setLoadingItems((prev) => ({ ...prev, [id]: false }));
+    }, 1500);
   };
 
   const handleDecreaseQuantity = (id) => {
+    setLoadingItems((prev) => ({ ...prev, [id]: true }));
     dispatch(decreaseQuantity(id));
+    setTimeout(() => {
+      setLoadingItems((prev) => ({ ...prev, [id]: false }));
+    }, 1500);
   };
 
   const calculateTotalPrice = (price, quantity) => {
@@ -59,7 +71,16 @@ export default function Cart(props) {
               {cart?.map((item) => (
                 <div key={item?.id} className='mx-5 md:mx-3'>
                   <div className='flex gap-5 mb-5'>
-                    <img className='h-32 w-28 object-rounded rounded-md' src={item?.image} alt='item' />
+                    <div className="relative inline-block">
+                      <img className='h-32 w-28 object-rounded rounded-md' src={item?.image} alt='item' />
+                      {
+                        loadingItems[item?.id] && (
+                          <div className='absolute inset-0 flex items-center justify-center'>
+                            <CheckSpinner isLoading={loadingItems[item?.id]} />
+                          </div>
+                        )
+                      }
+                    </div>
                     <div className='flex gap-5'>
                       <div>
                         <h1 className='text-black text-sm cursor-pointer font-bold'>{item?.name}</h1>
@@ -96,7 +117,7 @@ export default function Cart(props) {
             {cart.length > 0 && (
               <>
                 <h1 className='text-xl font-bold mb-2 ml-6'>Total price: <span className="font-extrabold">₹{totalPrice}</span></h1>
-                <button
+                <button onClick={() => setProceedCheckOutModal(true)}
                   className='font-medium bg-black text-white p-4 md:p-3 rounded w-[369px] md:w-[365px] ml-2'
                 >
                   PROCEED TO CHECKOUT
@@ -105,6 +126,13 @@ export default function Cart(props) {
             )}
           </div>
         </Box>
+        {
+          proceedCheckOutModal &&
+          <CheckOutModal
+            proceedCheckOutModal={proceedCheckOutModal}
+            setProceedCheckOutModal={setProceedCheckOutModal}
+          />
+        }
       </Drawer>
     </div>
   );

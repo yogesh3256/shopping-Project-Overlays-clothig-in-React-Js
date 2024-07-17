@@ -1,12 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 /* Vertical Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
-  height: 6px; /* Also set height for horizontal scrollbar */
+  height: 6px;
+  /* Also set height for horizontal scrollbar */
   border: 2px solid #332424;
 }
 

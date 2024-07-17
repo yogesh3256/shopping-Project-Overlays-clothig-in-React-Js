@@ -1,4 +1,4 @@
-import { useState, useEffect,useLayoutEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import Logo from '../assets/Navbar/logo.jpg';
 import Logo1 from '../assets/Navbar/logo1.png.jpg';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
@@ -19,7 +19,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
 import { useSelector } from 'react-redux';
 import { products } from '../data/Data';
- 
+
 
 function Navbar() {
   const [isMenuOpenMen, setIsMenuOpenMen] = useState(false);
@@ -34,10 +34,10 @@ function Navbar() {
   const [navbarStyle, setNavbarStyle] = useState({ backgroundColor: 'transparent', color: 'white' });
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
-  console.log("search value", searchTerm);
+
   const { cart } = useSelector((state) => state);
 
-   useLayoutEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
@@ -47,11 +47,11 @@ function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [scrollY]);
 
- //USE THE USELAYOUTEFFECT  WHEN YOU PERFORM ANY ANIMATION ,STYLING ,BACICALLY USE FOR STYLING .
+  //USE THE USELAYOUTEFFECT  WHEN YOU PERFORM ANY ANIMATION ,STYLING ,BACICALLY USE FOR STYLING .
 
-  useLayoutEffect(()=>{
+  useLayoutEffect(() => {
     // Check if scrollY is greater than some threshold value
     const threshold = 100; // Adjust this value according to your needs
     setHovered(scrollY > threshold);
@@ -63,7 +63,7 @@ function Navbar() {
       setNavbarStyle({ backgroundColor: 'transparent', color: 'black' });
     }
 
-  },[scrollY])
+  }, [scrollY])
 
   const toggleMenuMen = () => {
     setIsMenuOpenMen(!isMenuOpenMen);
@@ -154,12 +154,12 @@ function Navbar() {
             <Link to="/loginpage">
               <Person2OutlinedIcon />
             </Link>
- 
+
             {
               cart.length > 0 ? (<StyledBadge badgeContent={cart.length} color="secondary" className='cursor-pointer' onClick={toggleDrawer(true)}>
                 <LocalMallOutlinedIcon />
 
-              </StyledBadge>) : (<StyledBadge badgeContent={cart.length}showZero color="secondary" className='cursor-pointer' onClick={toggleDrawer(true)}>
+              </StyledBadge>) : (<StyledBadge badgeContent={cart.length} showZero color="secondary" className='cursor-pointer' onClick={toggleDrawer(true)}>
                 <LocalMallOutlinedIcon />
 
               </StyledBadge>)

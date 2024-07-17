@@ -1,4 +1,4 @@
-import { useState } from 'react' 
+import { useState } from 'react'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -10,13 +10,18 @@ import { products } from '../data/Data';
 
 
 function Tshirt() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  
-const tshirtarr = products.filter(product => product.category === 'tshirts'  && product.type === 'men')
+
+  const tshirtarr = products.filter(product => product.category === 'tshirts' && product.type === 'men')
+  const handleNavigate = (index) => {
+    const product =  tshirtarr[index];
+    navigate(`/Product/${product.name}`, { state: product });
+  }
+
   return (
     <div className='flex mt-28 mb-8'>
-     
+
       <div>
         <h1 className='text-center text-3xl font-bold mb-7 mt-7'>Tshirts collection</h1>
         <div className='grid grid-cols-2 md:grid-cols-4 gap-5  mx-6'>
@@ -24,7 +29,7 @@ const tshirtarr = products.filter(product => product.category === 'tshirts'  && 
             tshirtarr.map((tshirtitem, index) => {
               return (
                 <div key={tshirtitem.id}>
-                  <img onClick={() => { navigate('Product', { state: tshirtarr[index] }) }}
+                  <img onClick={() => handleNavigate(index)}
                     className='h-[26vh] w-[110vh] md:w-full md:h-[70vh] transition-transform duration-500 transform hover:scale-95  rounded-md'
                     src={hoveredIndex === index ? tshirtitem.imageHover : tshirtitem.image}
                     alt='ehef'
@@ -33,17 +38,17 @@ const tshirtarr = products.filter(product => product.category === 'tshirts'  && 
                   />
                   <div className=' mt-3 md:mt-5 '>
                     <h1
-                      onClick={() => { navigate('Product', { state: tshirtarr[index] }) }}
+                      onClick={() => handleNavigate(index)}
                       className='font-sans text-center cursor-pointer truncate`'>{tshirtitem.name}</h1>
                     <h1 className=' font-semibold text-center'><span className='font-bold'>₹</span>{tshirtitem.price}</h1>
                   </div>
                   <div className='grid grid-cols-3 md:grid-cols-6 gap-2'>
-                    <button onClick={() => { navigate('Product', { state: tshirtarr[index] }) }} className='border border-gray-400 hover:border-black md:p-1 hover:bg-gray-200'>XS</button>
-                    <button onClick={() => { navigate('Product', { state: tshirtarr[index] }) }} className='border border-gray-400 hover:border-black md:p-1 hover:bg-gray-200'>S</button>
-                    <button onClick={() => { navigate('Product', { state: tshirtarr[index] }) }} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200 '>M</button>
-                    <button onClick={() => { navigate('Product', { state: tshirtarr[index] }) }} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200 '>L</button>
-                    <button onClick={() => { navigate('Product', { state: tshirtarr[index] }) }} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200 '>XL</button>
-                    <button onClick={() => { navigate('Product', { state: tshirtarr[index] }) }} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200'>XXL</button>
+                    <button onClick={() => handleNavigate(index)} className='border border-gray-400 hover:border-black md:p-1 hover:bg-gray-200'>XS</button>
+                    <button onClick={() => handleNavigate(index)} className='border border-gray-400 hover:border-black md:p-1 hover:bg-gray-200'>S</button>
+                    <button onClick={() => handleNavigate(index)} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200 '>M</button>
+                    <button onClick={() => handleNavigate(index)} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200 '>L</button>
+                    <button onClick={() => handleNavigate(index)} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200 '>XL</button>
+                    <button onClick={() => handleNavigate(index)} className='border  border-gray-400 hover:border-black md:p-1 hover:bg-gray-200'>XXL</button>
                   </div>
                 </div>
               )

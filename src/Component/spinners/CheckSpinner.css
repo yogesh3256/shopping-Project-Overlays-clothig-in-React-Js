@@ -1,0 +1,43 @@
+.check-spinner {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+  }
+  
+  .spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #2f3538;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+    transition: opacity 0.3s ease; /* Smooth transition for the spinner */
+  }
+  
+  .checkmark {
+    font-size: 24px;
+    color: #2ecc71;
+    display: none;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.3s ease; /* Smooth transition for the checkmark */
+  }
+  
+  .check-spinner.is-success .spinner {
+    opacity: 0; /* Fade out the spinner */
+  }
+  
+  .check-spinner.is-success .checkmark {
+    display: block;
+    opacity: 1; /* Fade in the checkmark */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
