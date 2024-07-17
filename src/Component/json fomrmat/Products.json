@@ -1,0 +1,510 @@
+[
+    {
+      "id": 1,
+      "image": "image1",
+      "imageHover": "image1a",
+      "name": "The Conqueror Jacket",
+      "price": 2464
+    },
+    {
+      "id": 2,
+      "image": "image2",
+      "imageHover": "image2a",
+      "name": "The G.O.A.T Jacket",
+      "price": 2805
+    },
+    {
+      
+      "id": 3,
+      "image": "image3",
+      "imageHover": "image3a",
+      "name": "The OVRLS",
+      "price": 1749
+    },
+    {
+      "id": 4,
+      "image": "image4",
+      "imageHover": "image4a",
+      "name": "Viper Beige Jacket",
+      "price": 1889
+    },
+    {
+      "id": 5,
+      "image": "image5",
+      "imageHover": "image5a",
+      "name": "Roar Jacket",
+      "price": 1889
+    },
+    {
+      "id": 6,
+      "image": "image6",
+      "imageHover": "image6a",
+      "name": "Conqueror Jacket",
+      "price": 1949
+    },
+    {
+      "id": 7,
+      "image": "image7",
+      "imageHover": "image7a",
+      "name": "Falcon Jacket",
+      "price": 2024
+    },
+    {
+      "id": 8,
+      "image": "image8",
+      "imageHover": "image8a",
+      "name": "Emperor Jacket",
+      "price": 2024
+    },
+    
+
+    {
+        "id": 9,
+        "image": "image1",
+        "imageHover": "image1a",
+        "name": "Light Grey Mens Cargo Pants",
+        "price": 1349
+      },
+      {
+        "id": 10,
+        "image": "image2",
+        "imageHover": "image2a",
+        "name": "Olive Green Mens Cargo Pants",
+        "price": 1439
+      },
+      {
+        "id": 11,
+        "image": "image3",
+        "imageHover": "image3a",
+        "name": "Midnight Mens Cargo",
+        "price": 1799
+      },
+      {
+        "id": 12,
+        "image": "image4",
+        "imageHover": "image4a",
+        "name": "Steel Grey Shorts",
+        "price": 799
+      },
+      {
+        "id": 13,
+        "image": "image5",
+        "imageHover": "image5a",
+        "name": "Frost White Shorts",
+        "price": 699
+      },
+      {
+        "id": 14,
+        "image": "image6",
+        "imageHover": "image6a",
+        "name": "Black Flash Shorts",
+        "price": 799
+      },
+      {
+        "id": 15,
+        "image": "image7",
+        "imageHover": "image7a",
+        "name": "Tranquil Blue Joggers",
+        "price": 979
+      },
+      {
+        "id": 16,
+        "image": "image8",
+        "imageHover": "image8a",
+        "name": "Amber Joggers",
+        "price": 979
+      },
+      {
+        "id": 17,
+        "image": "image9",
+        "imageHover": "image9a",
+        "name": "Lime Fleece Joggers",
+        "price": 979
+      },
+      {
+        "id": 18,
+        "image": "image10",
+        "imageHover": "image10a",
+        "name": "Absolute Black Shorts",
+        "price": 799
+      },
+      {
+        "id": 19,
+        "image": "image11",
+        "imageHover": "image11a",
+        "name": "Raven Fleece Joggers",
+        "price": 979
+      },
+
+
+      
+
+      {
+        "id":20,
+        "image": "image1",
+        "imageHover": "image1a",
+        "name": "Midnight Polo Tshirt",
+        "price": 899
+      },
+      {
+        "id": 21,
+        "image": "image2",
+        "imageHover": "image2a",
+        "name": "PoloT-shirt-Blue",
+        "price": 899
+      },
+      {
+        "id": 22,
+        "image": "image3",
+        "imageHover": "image3a",
+        "name": "Matrix Opal Polo Tshirt",
+        "price": 999
+      },
+      {
+        "id": 23,
+        "image": "image4",
+        "imageHover": "image4a",
+        "name": "Polo Tshirt-Blush",
+        "price": 899
+      },
+
+      {
+        "id": 24,
+        "image": "image1",
+        "imageHover": "image1a",
+        "name": "Stripe Shirt",
+        "price": 1399
+      },
+      {
+        "id": 25,
+        "image": "image2",
+        "imageHover": "image2a",
+        "name": "Combat OverShirt",
+        "price": 1499
+      },
+
+
+      {
+        "id": 26,
+        "image": "image1",
+        "imageHover": "image1a",
+        "name": "Oversized G.O.A.T T-shirt",
+        "price": 999
+      },
+      {
+        "id": 27,
+        "image": "image2",
+        "imageHover": "image2a",
+        "name": "Ultra Soft Fearless T-shirt",
+        "price": 999
+      },
+      {
+        "id": 28,
+        "image": "image3",
+        "imageHover": "image3a",
+        "name": "Relaxed Fit Free Spirit Tshirt",
+        "price": 999
+      },
+      {
+        "id": 29,
+        "image": "image4",
+        "imageHover": "image4a",
+        "name": "Textured Oversized OVRLS T-shirt",
+        "price": 999
+      },
+      {
+        "id": 30,
+        "image": "image5",
+        "imageHover": "image5a",
+        "name": "Ultra Soft Phoenix T-shirt",
+        "price": 999
+      },
+      {
+        "id": 31,
+        "image": "image6",
+        "imageHover": "image6a",
+        "name": "Oversized Conqueror T-shirt",
+        "price": 999
+      },
+      {
+        "id": 32,
+        "image": "image7",
+        "imageHover": "image7a",
+        "name": "Arise T-shirt (black)",
+        "price": 999
+      },
+      {
+        "id": 33,
+        "image": "image8",
+        "imageHover": "image8a",
+        "name": "Ultra Blossom T-shirt",
+        "price": 899
+      },
+      {
+        "id": 34,
+        "image": "image9",
+        "imageHover": "image9a",
+        "name": "Dare To Dream White Relaxed Fit Tshirt",
+        "price": 999
+      },
+      {
+        "id": 35,
+        "image": "image10",
+        "imageHover": "image10a",
+        "name": "Textured Regular Fit Navy Blue T-shirt",
+        "price": 639
+      },
+      {
+        "id": 36,
+        "image": "image11",
+        "imageHover": "image11a",
+        "name": "Textured Regular Fit Brown T-shirt",
+        "price": 639
+      },
+      {
+        "id": 37,
+        "image": "image12",
+        "imageHover": "image12a",
+        "name": "Textured Regular Fit Black Pique T-shirt",
+        "price": 639
+      },
+      {
+        "id": 38,
+        "image": "image13",
+        "imageHover": "image13a",
+        "name": "Coffee Brown Oversized Fit Tshirt",
+        "price": 599
+      },
+      {
+        "id": 39,
+        "image": "image14",
+        "imageHover": "image14a",
+        "name": "Relaxed Fit Men OcTee Tshirt",
+        "price": 599
+      },
+      {
+        "id": 40,
+        "image": "image15",
+        "imageHover": "image15a",
+        "name": "Ultra Soft Regular Fit T-shirt",
+        "price": 719
+      },
+      {
+        "id": 41,
+        "image": "image16",
+        "imageHover": "image16a",
+        "name": "Relaxed Fit Men Sea Stallion Tshirt",
+        "price": 599
+      },
+      {
+        "id": 42,
+        "image": "image17",
+        "imageHover": "image17a",
+        "name": "Frost White Regular Fit T-shirt",
+        "price": 499
+      },
+
+
+       {
+    "id": 43,
+    "image": "image1",
+    "imageHover": "image1a",
+    "name": "Light Grey Women Cargo Pants",
+    "price": 1699
+  },
+  {
+    "id": 44,
+    "image": "image2",
+    "imageHover": "image2a",
+    "name": "Midnight Women Cargo Pants",
+    "price": 1699
+  },
+
+
+
+  {
+    "id": 45,
+    "image": "image1",
+    "imageHover": "image1a",
+    "name": "Purple Fitted Crop Top",
+    "price": 489
+  },
+  {
+    "id": 46,
+    "image": "image2",
+    "imageHover": "image2a",
+    "name": "Black Fitted Crop Top",
+    "price": 489
+  },
+  {
+    "id": 47,
+    "image": "image3",
+    "imageHover": "image3a",
+    "name": "Sleeveless Orange Crop Top",
+    "price": 489
+  },
+  {
+    "id": 48,
+    "image": "image4",
+    "imageHover": "image4a",
+    "name": "Relaxed Raglan Lilac Crop Top",
+    "price": 419
+  },
+  {
+    "id": 49,
+    "image": "image5",
+    "imageHover": "image5a",
+    "name": "Relaxed Fit Raglan Nude Crop Top",
+    "price": 419
+  },
+  {
+    "id": 50,
+    "image": "image6",
+    "imageHover": "image6a",
+    "name": "Baby Blue Fitted Crop Top",
+    "price": 699
+  },
+  {
+    "id": 51,
+    "image": "image7",
+    "imageHover": "image7a",
+    "name": "Relaxed Fit Brick Red Crop Top",
+    "price": 419
+  },
+  {
+    "id": 52,
+    "image": "image8",
+    "imageHover": "image8a",
+    "name": "Relaxed Raglan Crop Top Black",
+    "price": 599
+  },
+  {
+    "id": 53,
+    "image": "image9",
+    "imageHover": "image9a",
+    "name": "Ultramarine Full Sleeves Crop Top",
+    "price": 799
+  },
+  {
+    "id": 54,
+    "image": "image10",
+    "imageHover": "image10a",
+    "name": "Relaxed Raglan Crop Top - Red",
+    "price": 599
+  },
+  {
+    "id": 55,
+    "image": "image11",
+    "imageHover": "image11a",
+    "name": "Midnight Black Crop Top",
+    "price": 799
+  },
+  {
+    "id": 56,
+    "image": "image12",
+    "imageHover": "image12a",
+    "name": "Blaze Ribbed Full Sleeves Crop Top",
+    "price": 799
+  },
+
+  
+  
+  {
+    "id": 57,
+    "image": "image11",
+    "imageHover": "image11a",
+    "name": "The Polar Oversized Hoodie",
+    "price": 1679
+  },
+  {
+    "id": 58,
+    "image": "image12",
+    "imageHover": "image12a",
+    "name": "Tranquil Blue Oversized Hoodie",
+    "price": 1119
+  },
+  {
+    "id": 59,
+    "image": "image13",
+    "imageHover": "image13a",
+    "name": "Oversized Hoodie-Digital Lavender",
+    "price": 1499
+  },
+  {
+    "id": 60,
+    "image": "image14",
+    "imageHover": "image14a",
+    "name": "The Ted Oversized Hoodie",
+    "price": 1519
+  },
+  {
+    "id": 61,
+    "image": "image5",
+    "imageHover": "image5a",
+    "name": "Buff Oversized Hoodies",
+    "price": 1971
+  },
+  {
+    "id": 62,
+    "image": "image6",
+    "imageHover": "image6a",
+    "name": "Fox Grey Oversized hoodies",
+    "price": 1752
+  },
+  {
+    "id": 63,
+    "image": "image7",
+    "imageHover": "image7a",
+    "name": "Cocoa Brown Oversized Hoodies",
+    "price": 1872
+  },
+  {
+    "id": 64,
+    "image": "image8",
+    "imageHover": "image8a",
+    "name": "Raven Embossed Hoodies",
+    "price": 1749
+  },
+  {
+    "id": 65,
+    "image": "image9",
+    "imageHover": "image9a",
+    "name": "Mint Embossed Hoodie",
+    "price": 1749
+  },
+  {
+    "id": 66,
+    "image": "image10",
+    "imageHover": "image10a",
+    "name": "Fire Oversized Hoodie Orange",
+    "price": 2699
+  },
+  {
+    "id": 67,
+    "image": "image1",
+    "imageHover": "image1a",
+    "name": "Raven Oversized Hoodies",
+    "price": 1679
+  },
+  {
+    "id": 68,
+    "image": "image2",
+    "imageHover": "image2a",
+    "name": "Tranquil Blue Oversized Hoodie",
+    "price": 1799
+  },
+  {
+    "id": 69,
+    "image": "image3",
+    "imageHover": "image3a",
+    "name": "Red Embossed Hoodies",
+    "price": 2069
+  },
+  {
+    "id": 70,
+    "image": "image4",
+    "imageHover": "image4a",
+    "name": "Acid dark Hoodie",
+    "price": 1749
+  }
+  ]
